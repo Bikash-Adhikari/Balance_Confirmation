@@ -4,13 +4,13 @@ const esc = s => String(s).replace(/&/g, '&amp;').replace(/"/g, '&quot;').replac
 
 /* ---------- Defaults (values from the PDF sample) ---------- */
 const D = {
-  co: 'Imperial Law Associates Pvt. Ltd.', vat: '606519175',
+  co: 'Imperial Law Associates Pvt. Ltd.', vat: '123456789',
   addr: 'Anamnagar-29, Kathmandu 44600, Nepal', web: 'www.lawimperial.com',
-  cl: 'Dalfin A.I Solutions Pvt Ltd', cladd: 'Imadole-07, Lalitpur', clvat: '610141977',
+  cl: 'Dolphin Trade Solutions Pvt Ltd', cladd: 'Imadole-07, Lalitpur', clvat: '524698713',
   fy: '2082/083', beg: '2082-04-01', end: '2083-03-32',
   open: -1000.23, a: 192407.20, b: 0, c: 0, d: 0, e: 0, f: 0,
   rec: 230873, paid: 16339, tdsc: 2885.91, tdsu: 0,
-  sname: 'Bikash Adhikari', sdept: 'Account and Finance', phone: '9712037082', date: '2083-04-20',
+  sname: 'Bikash Adhikari', sdept: 'Account and Finance', phone: '97120XXXXX', date: '2083-04-20',
   v: { lh: 14.5, sh: 13, st: 25, sx: 28, sy: -7 }
 };
 const FY = ['2081/082', '2082/083', '2083/084', '2084/085', '2085/086'];
