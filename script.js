@@ -11,7 +11,7 @@ const D = {
   open: -1000.23, a: 192407.20, b: 0, c: 0, d: 0, e: 0, f: 0,
   rec: 230873, paid: 16339, tdsc: 2885.91, tdsu: 0,
   sname: 'Bikash Adhikari', sdept: 'Account and Finance', phone: '97120XXXXX', date: '2083-04-20',
-  v: { lh: 14.5, sh: 13, st: 25, sx: 28, sy: -7 }
+  v: { lh: 12.5, sh: 13, st: 25, sx: 28, sy: -7 }
 };
 const FY = ['2081/082', '2082/083', '2083/084', '2084/085', '2085/086'];
 const VAT = 0.13;
