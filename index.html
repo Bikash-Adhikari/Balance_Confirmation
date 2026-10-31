@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Balance Confirmation Letter</title>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="bar">
+  <h1>Balance Confirmation Letter (Developed by: <a href="https://www.linkedin.com/in/virtualbikash/" target="_blank">Bikash Adhikari</a>) </h1>
+  <div class="acts">
+    <button id="bPrint" class="pri">Print / Save as PDF</button>
+    <button id="bMail">Email</button>
+    <button id="bReset">Reset</button>
+  </div>
+</header>
+
+<main>
+  <aside class="panel" id="panel" aria-label="Input form"></aside>
+
+  <section class="stage">
+    <article class="sheet" id="sheet">
+      <div id="in">
+        <header class="lh">
+          <img id="imgLogo" class="logo" alt="Logo">
+          <h2 data-b="co"></h2>
+          <p class="vat"></p>
+          <p data-b="addr"></p>
+          <p data-b="web"></p>
+        </header>
+
+        <p class="date"></p>
+        <p class="to">TO,<br><span data-b="cl"></span><br><span data-b="cladd"></span><br>VAT/PAN No: <span data-b="clvat"></span></p>
+        <p class="sub"></p>
+        <p>Dear Sir/Madam,</p>
+        <p class="j" id="intro"></p>
+
+        <table id="tbl"></table>
+
+        <p class="j">Kindly verify and reconcile the amounts stated herein and return a duly signed and stamped copy of this letter within seven (7) days of receipt. Failing such response within the stipulated period, the amounts stated herein shall be deemed confirmed and accepted by you.</p>
+
+        <p class="u thanks">Thanks &amp; Regards:</p>
+        <div class="two">
+          <div>
+            <p class="u">From,</p>
+            <p data-b="co"></p>
+            <p>VAT No: <span data-b="vat"></span></p>
+            <p>Name: <span data-b="sname"></span></p>
+            <p>Department: <span data-b="sdept"></span></p>
+            <p>Contact: <span data-b="phone"></span></p>
+            <div class="seal"><img id="imgStamp" class="stamp" alt="Stamp"><img id="imgSig" class="sigimg" alt="Signature"></div>
+          </div>
+          <div>
+            <p class="u">For,</p>
+            <p data-b="cl"></p>
+            <p>VAT/PAN No: <span data-b="clvat"></span></p>
+            <p class="u b">Signature &amp; Stamp</p>
+            <p>Name:</p>
+            <p>Designation:</p>
+          </div>
+        </div>
+      </div>
+    </article>
+  </section>
+</main>
+
+<dialog id="dlg">
+  <h3>Email the letter</h3>
+  <label>To<input id="mTo" type="email" placeholder="client@example.com"></label>
+  <label>Cc<input id="mCc" type="email"></label>
+  <label>Subject<input id="mSub"></label>
+  <label>Message<textarea id="mMsg" rows="7"></textarea></label>
+  <p class="note">“Open in email app” fills a draft with the key figures. “Download .eml” saves a draft that contains the full letter with logo, signature and stamp; open it in Outlook, Apple Mail or Thunderbird and send.</p>
+  <div class="acts">
+    <button id="mOpen" class="pri">Open in email app</button>
+    <button id="mEml">Download .eml</button>
+    <button id="mClose">Close</button>
+  </div>
+</dialog>
+
+<script src="assets.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

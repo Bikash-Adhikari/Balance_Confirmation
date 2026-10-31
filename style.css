@@ -1,0 +1,83 @@
+/* Palette taken from the Excel theme: title = Accent1 darker 25%, header = Accent1 darker 50%, hint = Accent5 lighter 80% */
+:root{--navy:#203864;--blue:#2F5597;--tint:#DEEBF7;--lh:14.5mm;--sh:13mm;--st:25mm;--sx:28mm;--sy:-7mm;
+  font-family:"Segoe UI",system-ui,sans-serif;color:#111}
+*{box-sizing:border-box}
+body{margin:0;background:#e4eaf2}
+
+/* ---------- App chrome ---------- */
+.bar{position:sticky;top:0;z-index:5;display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:.6rem 1.2rem;background:var(--navy);color:#fff}
+.bar h1{margin:0;font-size:1.05rem;font-weight:600}
+.acts{display:flex;gap:.5rem;flex-wrap:wrap}
+button,.btn{font:inherit;font-size:.9rem;padding:.4rem .85rem;border:1px solid #fff9;background:transparent;color:#fff;border-radius:6px;cursor:pointer}
+button.pri{background:#fff;color:var(--navy);font-weight:600;border-color:#fff}
+:focus-visible{outline:2px solid #5B9BD5;outline-offset:2px}
+main{display:grid;grid-template-columns:370px minmax(0,1fr);gap:1.2rem;padding:1.2rem;align-items:start}
+.stage{overflow:auto}
+
+.panel{background:#fff;border-radius:8px;padding:.4rem 1rem 1rem;position:sticky;top:4.2rem;max-height:calc(100vh - 5.4rem);overflow:auto}
+fieldset{border:0;border-top:2px solid var(--navy);margin:1rem 0 0;padding:.5rem 0 0}
+legend{padding:0 .5rem 0 0;font-weight:600;color:var(--navy)}
+label{display:block;font-size:.82rem;margin:.45rem 0 0;color:#333}
+input,select,textarea{display:block;width:100%;font:inherit;font-size:.92rem;padding:.35rem .5rem;margin-top:.15rem;border:1px solid #b8c4d6;border-radius:5px;background:#fff}
+label.hl input{background:var(--tint)}
+.img{display:flex;align-items:center;gap:.5rem;margin:.4rem 0}
+.img span{flex:1;font-size:.9rem}
+.panel button,.btn,dialog button{color:var(--navy);border-color:#9fb3d1;padding:.25rem .65rem}
+.rg input{padding:0;border:0}
+
+dialog{width:min(520px,92vw);border:0;border-radius:10px;padding:1.2rem}
+dialog::backdrop{background:#0a1a3a88}
+dialog h3{margin:0 0 .4rem;color:var(--navy)}
+dialog .note{font-size:.8rem;color:#555;margin:.7rem 0}
+dialog .pri{background:var(--navy);color:#fff}
+
+/* ---------- The letter (A4, always one page) ---------- */
+.sheet{width:210mm;height:296mm;margin:0 auto;padding:12mm 15mm;background:#fff;overflow:hidden;
+  box-shadow:0 2px 16px #0003;font:12pt/1.25 "Aptos Narrow","Aptos Narrow Regular","Archivo Narrow","Arial Narrow",Arial,sans-serif;color:#000}
+.sheet p{margin:0}
+.sheet img:not([src]){display:none}
+.lh{position:relative;text-align:center;margin-bottom:.9em}
+.lh .logo{position:absolute;left:-1.7em;top:0;height:var(--lh)}
+.lh h2{margin:0;font-size:1.846em;line-height:1.2;color:var(--blue)}
+.vat{font-weight:700;font-size:1.077em}
+.lh p:not(.vat){font-size:.923em}
+.date{text-align:right;margin:.9em 0 .5em}
+.to{margin-bottom:.9em}
+.sub{font-weight:700;text-decoration:underline;margin-bottom:.9em;padding-top: 0.5em;padding-bottom: 0.5em;}
+.j{text-align:justify;margin:.55em 0}
+.u{text-decoration:underline}.b{font-weight:700}
+
+table{width:100%;border-collapse:collapse;margin:.4em 0 .6em}
+th,td{height:1.34em;padding:0 .3em;border-bottom:.75pt solid #000;line-height:1.1;text-align:left}
+th{border-top:.75pt solid #000;font-weight:700}
+.c{width:9%;text-align:center;border-left:.75pt solid #000;border-right:.75pt solid #000}
+.m{width:27%;text-align:right}
+.n{display:inline-block;min-width:11.2em}
+tr.b td,tr.t td{font-weight:700}
+tr.t td{border-bottom:3px double #000}
+
+.thanks{margin-top:1.6em;padding-top: 0.7em;}
+.two{display:grid;grid-template-columns:65% 35%}
+.seal{position:relative;height:var(--st);margin-top:.3em}
+.stamp{height:var(--st);margin-left:.8em}
+.sigimg{position:absolute;left:var(--sx);top:var(--sy);height:var(--sh);mix-blend-mode:multiply}
+.seal:not(:has(img[src])){display:none}
+
+
+a:-webkit-any-link {
+    color: -webkit-link;
+    cursor: pointer;
+    text-decoration: underline;
+    color: rgb(243, 239, 7);
+}
+
+
+
+@media (max-width:1100px){main{grid-template-columns:1fr}.panel{position:static;max-height:none}}
+@page{size:A4;margin:0}
+@media print{
+  body{background:#fff}
+  .bar,.panel,dialog{display:none!important}
+  main{display:block;padding:0}
+  .sheet{box-shadow:none;margin:0}
+}
